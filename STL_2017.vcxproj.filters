@@ -13,21 +13,162 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Algorithms">
+      <UniqueIdentifier>{7922119e-fb9e-4c89-9a64-6c4ebafd963e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Containers">
+      <UniqueIdentifier>{d615c5c7-7962-4d2a-947f-11202c4d1d07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Others">
+      <UniqueIdentifier>{4d96d9fd-5a4b-407e-942f-2ac3114d06c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type_Traits">
+      <UniqueIdentifier>{9f7a6019-889a-43e6-9d28-10def8644d7c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="STL_2017.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Algorithms\algorithms_binary_search.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\algorithms_heap.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\algorithms_merge.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\algorithms_min_max.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\algorithms_modifying.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\algorithms_not_modifying.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\algorithms_other.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\algorithms_partition.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\algorithms_sorting.cpp">
+      <Filter>Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\container_array.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\container_deque.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\container_forward_list.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\container_list.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\container_map.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\container_queue.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\container_set.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\container_stack.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\container_unordered_map.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\container_unordered_set.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\bitset.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\functional.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\initializer_list.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\limits.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\numeric.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\ratio.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\regex.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\tuple.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\type_traits.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\typeindex.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\typeinfo.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\utility.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\valarray.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_Traits\type_modifications.cpp">
+      <Filter>Type_Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_Traits\type_operations.cpp">
+      <Filter>Type_Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_Traits\type_properties.cpp">
+      <Filter>Type_Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_Traits\type_property_queries.cpp">
+      <Filter>Type_Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_Traits\type_relationships.cpp">
+      <Filter>Type_Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_Traits\composite_type_categories.cpp">
+      <Filter>Type_Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_Traits\primary_type_categories.cpp">
+      <Filter>Type_Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="Type_Traits\type_transformations.cpp">
+      <Filter>Type_Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp14.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp17.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="prototypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp14.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
