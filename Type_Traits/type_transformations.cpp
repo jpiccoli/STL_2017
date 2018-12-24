@@ -47,7 +47,7 @@ void type_transformations_test()
   if( !status )
     std::cout << "std::common_type error\n";
 
-  // underlying_type
+  // underlying_type - ONLY valid for enumeration types
   enum class e1 { E1 };
   enum class e2 : unsigned { E2 };
   auto str3 = typeid(std::underlying_type<e1>::type).name();

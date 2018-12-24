@@ -51,4 +51,6 @@ void std_type_traits()
 
   // Compiler does not support constructs
   type_operations_test();
+
+  integral_constant_test();
 }

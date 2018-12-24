@@ -185,6 +185,7 @@
     <ClCompile Include="Others\valarray.cpp" />
     <ClCompile Include="STL_2017.cpp" />
     <ClCompile Include="Type_Traits\composite_type_categories.cpp" />
+    <ClCompile Include="Type_Traits\integral_constant.cpp" />
     <ClCompile Include="Type_Traits\primary_type_categories.cpp" />
     <ClCompile Include="Type_Traits\type_modifications.cpp" />
     <ClCompile Include="Type_Traits\type_operations.cpp" />

@@ -13,3 +13,4 @@ void type_relationships_test();
 void type_modifications_test();
 void type_transformations_test();
 void type_operations_test();
+void integral_constant_test();
