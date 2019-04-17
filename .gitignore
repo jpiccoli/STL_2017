@@ -259,3 +259,14 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+STL_2017.tlog/STL_2017.lastbuildstate
+STL_2017.tlog/link.write.1.tlog
+STL_2017.tlog/link.read.1.tlog
+STL_2017.tlog/link.command.1.tlog
+STL_2017.tlog/CL.write.1.tlog
+STL_2017.tlog/CL.read.1.tlog
+STL_2017.tlog/CL.command.1.tlog
+log.txt
+STL_2017.vcxproj.filters
+STL_2017.vcxproj.filters
+STL_2017.vcxproj.filters

@@ -159,6 +159,12 @@
     <ClCompile Include="Type_Traits\integral_constant.cpp">
       <Filter>Type_Traits</Filter>
     </ClCompile>
+    <ClCompile Include="loguru.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\filesystem.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="prototypes.h">
@@ -171,6 +177,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cpp17.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="loguru.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
