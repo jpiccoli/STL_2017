@@ -45,6 +45,7 @@ void container_unordered_set();
 
 // Others
 void std_bitset();
+void std_filesystem();
 void std_functional();
 void std_initializer_list();
 void std_limits();

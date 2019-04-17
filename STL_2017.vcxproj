@@ -149,6 +149,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="cpp14.h" />
+    <ClInclude Include="cpp17.h" />
+    <ClInclude Include="loguru.hpp" />
+    <ClInclude Include="prototypes.h" />
+    <ClInclude Include="Tests.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="Algorithms\algorithms_binary_search.cpp" />
     <ClCompile Include="Algorithms\algorithms_heap.cpp" />
     <ClCompile Include="Algorithms\algorithms_merge.cpp" />
@@ -170,7 +177,9 @@
     <ClCompile Include="Containers\container_unordered_set.cpp" />
     <ClCompile Include="cpp14.cpp" />
     <ClCompile Include="cpp17.cpp" />
+    <ClCompile Include="loguru.cpp" />
     <ClCompile Include="Others\bitset.cpp" />
+    <ClCompile Include="Others\filesystem.cpp" />
     <ClCompile Include="Others\functional.cpp" />
     <ClCompile Include="Others\initializer_list.cpp" />
     <ClCompile Include="Others\limits.cpp" />
@@ -193,12 +202,6 @@
     <ClCompile Include="Type_Traits\type_property_queries.cpp" />
     <ClCompile Include="Type_Traits\type_relationships.cpp" />
     <ClCompile Include="Type_Traits\type_transformations.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="cpp14.h" />
-    <ClInclude Include="cpp17.h" />
-    <ClInclude Include="prototypes.h" />
-    <ClInclude Include="Tests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
