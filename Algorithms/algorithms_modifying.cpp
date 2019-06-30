@@ -425,11 +425,30 @@ void unique()
 
   auto itr = std::unique(vec.begin(), vec.end());
   vec.resize(std::distance(vec.begin(), itr));
-  std::cout << "unique(): ";
-  for (auto itr = vec.begin(); itr != vec.end(); ++itr)
+  //std::cout << "unique(): ";
+  //for (auto itr = vec.begin(); itr != vec.end(); ++itr)
+  //{
+  //  std::cout << *itr << " ";
+  //}
+
+  if( vec.size() == 6 )
   {
-    std::cout << *itr << " ";
+    std::cout << "unique() #1 passed\n";
   }
+  else
+  {
+    std::cout << "unique() #1 failed\n";
+  }
+
+  if( vec[0] == 6 && vec[1] == 7 && vec[2] == 8 && vec[3] == 9 && vec[4] == 11 && vec[5] == 12 )
+  {
+    std::cout << "unique() #2 passed\n";
+  }
+  else
+  {
+    std::cout << "unique() #2 failed\n";
+  }
+
   std::cout << std::endl;
 }
 

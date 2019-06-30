@@ -42,6 +42,12 @@ struct MakeFromTuple
   std::string s;
 };
 
+struct X
+{
+  const int n;
+  int m;
+};
+
 void show_cpp_17_features()
 {
   std::cout << '\n';
@@ -83,11 +89,12 @@ void show_cpp_17_features()
   std::cout << "------------------------\n";
   std::cout << "Variant\n";
   std::cout << "------------------------\n";
-
+  // TODO: 06/29/2019
 
   std::cout << "------------------------\n";
   std::cout << "boost::variant\n";
   std::cout << "------------------------\n";
+  // TODO: 06/29/2019
 
   std::cout << '\n';
 
@@ -225,7 +232,10 @@ void show_cpp_17_features()
   std::chrono::duration<double, std::milli> ms5 = t2tr - t1tr;
   std::cout << std::fixed << "std::transform_reduce() = " << v4 << " parallel time = " << ms5.count() << " ms\n\n";
 
+  // TODO: 06/29/2019
   // transform_exclusive_scan
+
+  // TODO: 06/29/2019
   // transform_inclusive_scan
 
   // gcd
@@ -303,7 +313,10 @@ void show_cpp_17_features()
   //else
   //  std::cout << "The string " << needle << " not found\n\n";
 
+  // TODO: 06/29/2019
   // boyer_moore_searcher
+  
+  // TODO: 06/29/2019
   // boyer_moore_horspool_searcher
 
   std::cout << '\n';
@@ -358,4 +371,48 @@ void show_cpp_17_features()
 
   // chars_format
   // Not supported by compiler - 12/23/2018
+
+  // TODO: 06/29/2019
+  // optional
+
+  // as_const
+  std::string mutableString = "Hello World!";
+  const std::string& constView = std::as_const( mutableString );
+
+  assert( &constView == &mutableString );
+  assert( &std::as_const( mutableString ) == &mutableString );
+
+  if( &std::as_const( mutableString ) == &mutableString )
+  {
+    std::cout << "std::as_const() passed\n\n";
+  }
+  else
+  {
+    std::cout << "std::as_const() failed\n\n";
+  }
+  
+  // launder
+  X *pLaunder = new X{ 3,4 };
+  X *npLaunder = new (pLaunder) X{ 5,6 };
+
+  const int d = std::launder( pLaunder )->n;
+  const int e = npLaunder->n;
+
+  if( d == 5 )
+  {
+    std::cout << "std::launder() #1 passed\n\n";
+  }
+  else
+  {
+    std::cout << "std::launder() #1 failed\n\n";
+  }
+
+  if( e == 5 )
+  {
+    std::cout << "std::launder() #2 passed\n\n";
+  }
+  else
+  {
+    std::cout << "std::launder() #2 failed\n\n";
+  }
 }
