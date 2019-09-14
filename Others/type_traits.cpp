@@ -30,6 +30,34 @@ struct field_value<typename field_type, typename std::enable_if< std::is_same< f
   }
 };
 
+template <typename T, typename = void>
+struct is_compute_available : std::false_type {};
+
+template <typename T>
+struct is_compute_available<T,
+  std::void_t<decltype( Compute( std::declval<T>(),
+    std::declval<T&>() ) ) >> : std::true_type {};
+
+template< class T>
+inline constexpr bool is_compute_available_v = is_compute_available<T>::value;
+
+void Compute( int, int& ) { std::cout << "Computing int\n"; }
+void Compute( double, double& ) { std::cout << "Computing double\n"; }
+
+template <typename T>
+void ComputeTest( T val )
+{
+  if constexpr ( is_compute_available_v<T> )    // Note different syntax
+  {
+    T out{};
+    Compute( val, out );
+  }
+  else
+  {
+    std::cout << "fallback...\n";
+  }
+}
+
 void std_type_traits()
 {
   // Check std::enable_if and std::is_same
@@ -53,4 +81,51 @@ void std_type_traits()
   type_operations_test();
 
   integral_constant_test();
+
+  int int_result = 0;
+  int double_result = 0;
+
+  ComputeTest<int>( 7 );        // Prints "Computing int"
+  ComputeTest<double>( 8.0 );   // Prints "Computing double"
+  ComputeTest<float>( 8.0f );   // Prints "fallback..."
 }
+
+// Reference: http://coliru.stacked-crooked.com/a/dff6ff04ab058c29
+/*
+#include <iostream>
+#include <type_traits>
+
+void Compute(int, int&) { std::cout << "Computing int\n"; }
+void Compute(double, double&) { std::cout << "Computing double\n"; }
+
+template <typename T, typename = void>
+struct is_compute_available : std::false_type {};
+template <typename T>
+struct is_compute_available<T, std::void_t<decltype(Compute(std::declval<T>(), std::declval<T&>())) >> : std::true_type {};
+
+// helper variable template
+template< class T> inline constexpr bool is_compute_available_v = is_compute_available<T>::value;
+
+template <typename T>
+void ComputeTest(T val)
+{
+if constexpr (is_compute_available_v<T>)
+{
+T out { };
+Compute(val, out);
+}
+else
+{
+std:: cout << "fallback...\n";
+}
+}
+
+int main(int argc, const char** argv) {
+
+ComputeTest<int>(10);
+ComputeTest<double>(10.5);
+ComputeTest<float>(10.5f);
+
+return 0;
+}
+*/
