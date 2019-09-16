@@ -25,6 +25,9 @@
     <Filter Include="Type_Traits">
       <UniqueIdentifier>{9f7a6019-889a-43e6-9d28-10def8644d7c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Constructs">
+      <UniqueIdentifier>{d2c2e718-2786-4300-b08b-956e4bee5ddf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="STL_2017.cpp">
@@ -165,6 +168,9 @@
     <ClCompile Include="Others\filesystem.cpp">
       <Filter>Others</Filter>
     </ClCompile>
+    <ClCompile Include="Constructs\constructs.cpp">
+      <Filter>Constructs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="prototypes.h">
@@ -180,6 +186,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="loguru.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="constructs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

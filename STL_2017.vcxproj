@@ -149,6 +149,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="constructs.h" />
     <ClInclude Include="cpp14.h" />
     <ClInclude Include="cpp17.h" />
     <ClInclude Include="loguru.hpp" />
@@ -165,6 +166,7 @@
     <ClCompile Include="Algorithms\algorithms_other.cpp" />
     <ClCompile Include="Algorithms\algorithms_partition.cpp" />
     <ClCompile Include="Algorithms\algorithms_sorting.cpp" />
+    <ClCompile Include="Constructs\constructs.cpp" />
     <ClCompile Include="Containers\container_array.cpp" />
     <ClCompile Include="Containers\container_deque.cpp" />
     <ClCompile Include="Containers\container_forward_list.cpp" />

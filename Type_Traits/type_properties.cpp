@@ -10,7 +10,12 @@ void type_properties_test()
   typedef const int ci;
   status = std::is_const<ci>::value;
   if( !status )
-    std::cout << "std::is_const error\n";
+    std::cout << "std::is_const #1 error\n";
+
+  typedef int nci;
+  status = std::is_const<nci>::value;
+  if( status )
+    std::cout << "std::is_const #2 error\n";
 
   // is_volatile
   typedef volatile int vi;
@@ -27,7 +32,7 @@ void type_properties_test()
 
   status = std::is_trivial<ZAC>::value;
   if( !status )
-    std::cout << "is_trivial error 1\n";
+    std::cout << "is_trivial error 2\n";
 
   // is_trivially_copyable
   status = std::is_trivially_copyable<ZAB>::value;
