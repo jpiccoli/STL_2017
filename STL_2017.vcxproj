@@ -177,6 +177,7 @@
     <ClCompile Include="Containers\container_stack.cpp" />
     <ClCompile Include="Containers\container_unordered_map.cpp" />
     <ClCompile Include="Containers\container_unordered_set.cpp" />
+    <ClCompile Include="Containers\container_vector.cpp" />
     <ClCompile Include="cpp14.cpp" />
     <ClCompile Include="cpp17.cpp" />
     <ClCompile Include="loguru.cpp" />
@@ -188,6 +189,7 @@
     <ClCompile Include="Others\numeric.cpp" />
     <ClCompile Include="Others\ratio.cpp" />
     <ClCompile Include="Others\regex.cpp" />
+    <ClCompile Include="Others\string_operations.cpp" />
     <ClCompile Include="Others\tuple.cpp" />
     <ClCompile Include="Others\typeindex.cpp" />
     <ClCompile Include="Others\typeinfo.cpp" />

@@ -42,6 +42,7 @@ void container_set();
 void container_stack();
 void container_unordered_map();
 void container_unordered_set();
+void container_vector();
 
 // Others
 void std_bitset();
@@ -52,6 +53,7 @@ void std_limits();
 void std_numeric();
 void std_ratio();
 void std_regex();
+void std_string_operations();
 void std_tuple();
 void std_typeindex();
 void std_typeinfo();

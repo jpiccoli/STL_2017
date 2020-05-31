@@ -171,6 +171,12 @@
     <ClCompile Include="Constructs\constructs.cpp">
       <Filter>Constructs</Filter>
     </ClCompile>
+    <ClCompile Include="Others\string_operations.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Containers\container_vector.cpp">
+      <Filter>Containers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="prototypes.h">
