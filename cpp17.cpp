@@ -52,7 +52,32 @@ void show_cpp_17_features()
 {
   std::cout << '\n';
 
-  // Selection statements with initializers
+  auto test_function = [] ( int number )
+  {
+    return number * number;
+  };
+
+  std::cout << "----------------------------------------\n";
+  std::cout << "Conditional Statements With Initializers\n";
+  std::cout << "----------------------------------------\n";
+
+  // If statements with initializers
+  if( int answer = test_function( 7 ); answer %2 == 1 )
+    std::cout << "If statement with initializer passes: " << answer << "\n";
+  else
+    std::cout << "If statement with initializer fails\n";
+
+  // Switch statements with initializers
+  switch( int answer = test_function( 9 ); answer )
+  {
+  case 81:
+    std::cout << "Switch statement with initializer passes: " << answer << "\n";
+    break;
+  default:
+    std::cout << "Switch statement with initializer fails\n";
+  }
+
+  std::cout << '\n';
 
   std::cout << "----------------\n";
   std::cout << "Any\n";
