@@ -103,48 +103,48 @@ void container_map()
   static std::map<int, int> map_to_clear = { { 1, 100 }, { 2, 200 } };
   if( map_to_clear.size() == 2 )
   {
-    std::cout << "std::map::clear() #1  passed()\n";
+    std::cout << "std::map::clear() #1  passed\n";
     map_to_clear.clear();
     if( !map_to_clear.size() )
-      std::cout << "std::map::clear() #2 passed()\n";
+      std::cout << "std::map::clear() #2 passed\n";
     else
-      std::cout << "std::map::clear() #2 failed()\n";
+      std::cout << "std::map::clear() #2 failed\n";
   }
   else
   {
-    std::cout << "std::map::clear() #1 failed()\n";
+    std::cout << "std::map::clear() #1 failed\n";
   }
 
   // insert()
   cars.insert( { "Corvair", 1964 } );
   auto itr1 = cars.find( "Corvair" );
   if( itr1 != cars.end() )
-    std::cout << "std::map::insert() passed()\n";
+    std::cout << "std::map::insert() passed\n";
   else
-    std::cout << "std::map::insert() failed()\n";
+    std::cout << "std::map::insert() failed\n";
 
   // insert_or_assign()
   cars.insert_or_assign( "Z24", 1987 );
   auto itr2 = cars.find( "Z24" );
   if( itr2 != cars.end() && itr2->second == 1987 )
-    std::cout << "std::map::insert_or_assign() #1 passed()\n";
+    std::cout << "std::map::insert_or_assign #1 passed\n";
   else
-    std::cout << "std::map::insert_or_assign() #1 failed()\n";
+    std::cout << "std::map::insert_or_assign #1 failed\n";
 
   cars.insert_or_assign( "Malibu", 2004 );
   auto itr3 = cars.find( "Malibu" );
   if( itr3 != cars.end() && itr3->second == 2004 )
-    std::cout << "std::map::insert_or_assign() #2 passed()\n";
+    std::cout << "std::map::insert_or_assign #2 passed\n";
   else
-    std::cout << "std::map::insert_or_assign() #2 failed()\n";
+    std::cout << "std::map::insert_or_assign #2 failed\n";
 
   // emplace()
   cars.emplace( std::make_pair( "Duster", 1987 ) );
   auto itr4 = cars.find( "Duster" );
   if( itr4 != cars.end() && itr4->second == 1987 )
-    std::cout << "std::map::emplace() passed()\n";
+    std::cout << "std::map::emplace() passed\n";
   else
-    std::cout << "std::map::emplace() failed()\n";
+    std::cout << "std::map::emplace() failed\n";
 
   // emplace_hint()
   // TODO: 05/31/2020
@@ -153,16 +153,16 @@ void container_map()
   cars.try_emplace( "Cavaliar LV", 1988 );
   auto itr5 = cars.find( "Cavaliar LV" );
   if( itr5 != cars.end() && itr5->second == 1988 )
-    std::cout << "std::map::try_emplace() #1 passed()\n";
+    std::cout << "std::map::try_emplace() #1 passed\n";
   else
-    std::cout << "std::map::try_emplace() #1 failed()\n";
+    std::cout << "std::map::try_emplace() #1 failed\n";
 
   cars.try_emplace( "Fiero", 1983 );
   auto itr6 = cars.find( "Fiero" );
   if( itr6 != cars.end() && itr6->second == 1983 )
-    std::cout << "std::map::try_emplace() #2 passed()\n";
+    std::cout << "std::map::try_emplace() #2 passed\n";
   else
-    std::cout << "std::map::try_emplace() #2 failed()\n";
+    std::cout << "std::map::try_emplace() #2 failed\n";
 
   // erase()
   for( auto itr7 = cars.begin(); itr7 != cars.end(); )
@@ -174,9 +174,9 @@ void container_map()
   }
   auto itr8 = cars.find( "Cavalier LV" );
   if( itr8 == cars.end() )
-    std::cout << "std::map::erase() passed()\n";
+    std::cout << "std::map::erase() passed\n";
   else
-    std::cout << "std::map::erase() failed()\n";
+    std::cout << "std::map::erase() failed\n";
 
   // swap()
   std::map<std::string, int> test_map1 = {
@@ -197,9 +197,9 @@ void container_map()
   auto itr11 = test_map1.find( "31" );
   auto itr12 = test_map2.find( "27" );
   if( itr11 != test_map1.end() && itr12 != test_map2.end() )
-    std::cout << "std::map::swap() passed()\n";
+    std::cout << "std::map::swap() passed\n";
   else
-    std::cout << "std::map::swap() failed()\n";
+    std::cout << "std::map::swap() failed\n";
 
   // extract()
   auto nh = cars.extract( "Chrysler" );
@@ -207,9 +207,9 @@ void container_map()
   cars.insert( std::move( nh ) );
   auto itr14 = cars.find( "Turismo 2.2" );
   if( itr14 != cars.end() )
-    std::cout << "std::map::extract() passed()\n";
+    std::cout << "std::map::extract() passed\n";
   else
-    std::cout << "std::map::extract() failed()\n";
+    std::cout << "std::map::extract() failed\n";
 
   // merge()
   std::map<std::string, int> test_map3;
@@ -218,9 +218,9 @@ void container_map()
   auto itr15 = test_map3.find( "31" );
   auto itr16 = test_map3.find( "27" );
   if( itr16 != test_map3.end() && itr16 != test_map3.end() )
-    std::cout << "std::map::merge() passed()\n";
+    std::cout << "std::map::merge() passed\n";
   else
-    std::cout << "std::map::merge() failed()\n";
+    std::cout << "std::map::merge() failed\n";
 
   /////////
   // Lookup
@@ -228,15 +228,15 @@ void container_map()
   // count()
   auto element_count = cars.count( "Cavalier LV" );
   if( !element_count )
-    std::cout << "std::map::count() #1 passed()\n";
+    std::cout << "std::map::count() #1 passed\n";
   else
-    std::cout << "std::map::count() #1 failed()\n";
+    std::cout << "std::map::count() #1 failed\n";
 
   element_count = cars.count( "Horizon" );
   if( element_count )
-    std::cout << "std::map::count() #2 passed()\n";
+    std::cout << "std::map::count() #2 passed\n";
   else
-    std::cout << "std::map::count() #2 failed()\n";
+    std::cout << "std::map::count() #2 failed\n";
 
   // find()
   // Covered above
@@ -270,47 +270,49 @@ void container_map()
   auto q1 = p1.first;
   auto q2 = p1.second;
   if( q1->first == 2 && q2->first == 4 )
-    std::cout << "std::map::equal_range() #1 passed()\n";
+    std::cout << "std::map::equal_range() #1 passed\n";
   else
-    std::cout << "std::map::equal_range() #1 failed()\n";
+    std::cout << "std::map::equal_range() #1 failed\n";
 
   auto p2 = eq_range_map1.equal_range( 3 );
   auto q3 = p2.first;
   auto q4 = p2.second;
   if( q3->first == 4 && q4->first == 4 )
-    std::cout << "std::map::equal_range() #2 passed()\n";
+    std::cout << "std::map::equal_range() #2 passed\n";
   else
-    std::cout << "std::map::equal_range() #2 failed()\n";
+    std::cout << "std::map::equal_range() #2 failed\n";
 
   auto p3 = eq_range_map1.equal_range( -1 );
   auto q5 = p3.first;
   auto q6 = p3.second;
   if( q5->first == 0 && q6->first == 0 )
-    std::cout << "std::map::equal_range() #3 passed()\n";
+    std::cout << "std::map::equal_range() #3 passed\n";
   else
-    std::cout << "std::map::equal_range() #3 failed()\n";
+    std::cout << "std::map::equal_range() #3 failed\n";
 
   auto p4 = eq_range_map1.equal_range( 12 );
   auto q7 = p4.first;
   auto q8 = p4.second;
   if( q7->first == 12 && q8->first == 14 )
-    std::cout << "std::map::equal_range() #4 passed()\n";
+    std::cout << "std::map::equal_range() #4 passed\n";
   else
-    std::cout << "std::map::equal_range() #4 failed()\n";
+    std::cout << "std::map::equal_range() #4 failed\n";
 
   // lower_bound()
   auto itr20 = eq_range_map1.lower_bound( 1 );
   if( itr20->first == 2 )
-    std::cout << "std::map::lower_bound() passed()\n";
+    std::cout << "std::map::lower_bound() passed\n";
   else
-    std::cout << "std::map::lower_bound() failed()\n";
+    std::cout << "std::map::lower_bound() failed\n";
 
   // upper_bound()
   auto itr21 = eq_range_map1.upper_bound( 5 );
   if( itr21->first == 6 )
-    std::cout << "std::map::upper_bound() passed()\n";
+    std::cout << "std::map::upper_bound() passed\n";
   else
-    std::cout << "std::map::upper_bound() failed()\n";
+    std::cout << "std::map::upper_bound() failed\n";
+
+  std::cout << '\n';
 
   ////////////
   // Observers
@@ -327,9 +329,9 @@ void container_map()
     key_val_vec.push_back( itr22->first );
   }
   if( key_val_vec.size() == 8 )
-    std::cout << "std::map::key_comp() passed()\n";
+    std::cout << "std::map::key_comp() passed\n";
   else
-    std::cout << "std::map::key_comp() failed()\n";
+    std::cout << "std::map::key_comp() failed\n";
 
   std::cout << '\n';
 
@@ -345,9 +347,9 @@ void container_map()
     value_val_vec.push_back( itr23->second );
   }
   if( value_val_vec.size() == 7 )
-    std::cout << "std::map::value_comp() passed()\n";
+    std::cout << "std::map::value_comp() passed\n";
   else
-    std::cout << "std::map::value_comp() failed()\n";
+    std::cout << "std::map::value_comp() failed\n";
 
   std::cout << '\n';
 }
