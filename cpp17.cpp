@@ -356,17 +356,17 @@ void show_cpp_17_features()
   auto apply_tuple = std::make_tuple( 2, 3, 4 );
   auto apply_result = std::apply( multiply_values, apply_tuple );
   if( apply_result == 24 )
-    std::cout << "std::apply() passed\n\n";
+    std::cout << "std::apply() passed\n";
   else
-    std::cout << "std::apply() failed\n\n";
+    std::cout << "std::apply() failed\n";
 
   // make_from_tuple
   auto tuple_base = std::make_tuple( 97, std::string( "MakeFromTupleTest" ) );
   auto mft = std::make_from_tuple<MakeFromTuple>( std::move( tuple_base ) );
   if( mft.i == 97 && mft.s == "MakeFromTupleTest" )
-    std::cout << "std::make_from_tuple passed()\n\n";
+    std::cout << "std::make_from_tuple passed\n";
   else
-    std::cout << "std::make_from_tuple failed\n\n";
+    std::cout << "std::make_from_tuple failed\n";
 
   // to_chars
   std::array<char, 11> char_array;
@@ -376,9 +376,9 @@ void show_cpp_17_features()
     std::string_view sv( char_array.data(), p - char_array.data() );
     std::string str( sv );
     if( str == "2797" )
-      std::cout << "std::to_chars() passed\n\n";
+      std::cout << "std::to_chars() passed\n";
     else
-      std::cout << "std::to_chars() #2 failed\n\n";
+      std::cout << "std::to_chars() #2 failed\n";
   }
   else
   {
@@ -390,9 +390,9 @@ void show_cpp_17_features()
   int conv_value;
   std::from_chars( conv_source.c_str(), conv_source.c_str() + conv_source.size(), conv_value );
   if( conv_value == 727 )
-    std::cout << "std::from_chars() passed\n\n";
+    std::cout << "std::from_chars() passed\n";
   else
-    std::cout << "std::from_chars() failed\n\n";
+    std::cout << "std::from_chars() failed\n";
 
   // chars_format
   // Not supported by compiler - 12/23/2018
@@ -409,11 +409,11 @@ void show_cpp_17_features()
 
   if( &std::as_const( mutableString ) == &mutableString )
   {
-    std::cout << "std::as_const() passed\n\n";
+    std::cout << "std::as_const() passed\n";
   }
   else
   {
-    std::cout << "std::as_const() failed\n\n";
+    std::cout << "std::as_const() failed\n";
   }
   
   // launder
@@ -425,19 +425,19 @@ void show_cpp_17_features()
 
   if( d == 5 )
   {
-    std::cout << "std::launder() #1 passed\n\n";
+    std::cout << "std::launder() #1 passed\n";
   }
   else
   {
-    std::cout << "std::launder() #1 failed\n\n";
+    std::cout << "std::launder() #1 failed\n";
   }
 
   if( e == 5 )
   {
-    std::cout << "std::launder() #2 passed\n\n";
+    std::cout << "std::launder() #2 passed\n";
   }
   else
   {
-    std::cout << "std::launder() #2 failed\n\n";
+    std::cout << "std::launder() #2 failed\n";
   }
 }
